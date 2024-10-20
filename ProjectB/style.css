@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap');
+
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1160px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+/* リセットと共通設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+section {
+  padding: 80px 0; /* 上下の間隔を広げる */
+  margin-bottom: 0px; /* セクション間の余白を追加 */
+}
+/* ヘッダー */
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url("images/bg.jpg") center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 10; 
+}
+
+nav {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 auto 20px auto;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 450;
+}
+
+nav ul {
+  background: rgb(0, 0, 0);
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 20px 30px;
+}
+
+nav ul li a {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20; /* 画像よりも前面 */
+  background: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px 3%;
+  max-height: 15%;
+  transition: all 0.6s;
+}
+nav.sticky .logo {
+  margin: 20 0;
+}
+nav.sticky ul {
+  background: transparent;
+  font-size: 1.3rem;
+}
+
+/* エリア_ホーム */
+[class*="area_home"] {
+  padding: 80px 0 120px;
+}
+/* セクションタイトル */
+.title_head .ttl {
+  font: 500 56px/1em 'futura PT', 'Noto Sans JP', sans-serif;
+  position: relative;
+}
+
+.title_head {
+  margin: 0 0 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.title_head .ttl:after {
+  content: "";
+  display: block;
+  height: 5px;
+  background: #0cf;
+  position: absolute;
+  bottom: 1;
+  left: 0;
+  width: 100%;
+}
+
+/* 2分割レイアウト */
+.layout_2_div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 -400px;
+}
+
+.layout_2_div > div {
+  width: 50%;
+  padding: 0 70px;
+  margin-bottom: 60px; /* 要素間の余白を増やす */
+}
+/* 内装 */
+.area_home_salon img {
+  transform:scale(0.5);
+  transform-origin: center center;
+}
+/* テキストサロン */
+.text_salon .ttl {
+  font: 500 32px/1em 'futura PT', 'Noto Sans JP', sans-serif;
+}
+
+.text_salon .description {
+  font: 300 20px/1.8em 'futura PT', 'Noto Sans JP', sans-serif;
+}
+/* バックグラウンド */
+.bg_black {
+  color: #ffffff;
+  background: #000;
+}
+/* メニュー */
+.list_menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+.list_menu > li {
+  width: 33.3333%;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.list_menu > li {
+  margin-bottom: 50px; /* メニュー要素間の余白を追加 */
+}
+/* プロフィール */
+.area_home_profile{
+  background: rgb(221, 220, 220);
+}
+.area_home_profile img {
+  transform:scale(0.8);
+  transform-origin: center center;
+}
+
+/* コンタクト */
+.area_home_contact {
+  padding: 80px 0;
+  background-color: #f1f1f1;
+}
+
+.contact_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.map iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  margin: 0 -40px;
+}
+
+.contact_info {
+  text-align: center;
+  margin: 0 70px;
+}
+
+.phone_label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.phone_number {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact_text {
+  font-size: 1.3rem;
+  color: #666;
+}
+
+
+/* フッター */
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.footer-links a {
+  color: white; /* 文字色を白に設定 */
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: #00ccff;
+}
